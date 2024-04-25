@@ -1,3 +1,6 @@
+/**
+* Change CPT slug without losing the posts
+*/
 function stackoverflow_remove_cpt_slug( $post_link, $post ) {
     if ( 'landing' === $post->post_type && 'publish' === $post->post_status ) {
         $post_link = str_replace( '/' . $post->post_type . '/', '/', $post_link );
